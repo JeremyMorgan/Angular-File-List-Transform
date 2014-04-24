@@ -1,0 +1,58 @@
+<html>
+<body ng-app="FileListTransformApp" >
+<title>File List Transform</title>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+
+			<form class="form-horizontal" name="ourForm" ng-controller="FileListCtrl"> 
+				<fieldset>
+
+				<!-- Form Name -->
+				<legend>File List Transform</legend>
+				
+				<!-- Text input-->
+				<div class="control-group">
+				  <label class="control-label" for="textinput">Text Input</label>
+				  <div class="controls">
+					<input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge" ng-model="main.inputtext" value="{{main.inputtext}}">
+					
+				  </div>
+				</div>
+
+				<!-- Multiple Checkboxes -->
+				<div class="control-group">
+				  <label class="control-label" for="checkboxes">Actions</label>
+				  <div class="controls">
+					<label class="checkbox" for="checkboxes-0">
+					  <input type="checkbox" name="checkboxes" id="checkbox0" value="Prepend Text"  ng-click="TransformText('prepend')">
+					  Prepend Text
+					</label>
+					<label class="checkbox" for="checkboxes-1">
+					  <input type="checkbox" name="checkboxes" id="checkbox1" value="Append Text" ng-click="TransformText('append')">
+					  Append Text
+					</label>
+				  </div>
+				</div>
+
+				<!-- Textarea -->
+				<div class="control-group">
+				  <label class="control-label" for="contents">File List</label>
+				  <div class="controls">                     
+					<textarea id="contents" name="contents" rows="30" cols="150" ng-model="main.contents"></textarea>
+				  </div>
+				</div>
+
+				</fieldset>
+				</form>			
+		</div>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="filelist.js"></script>
+</body>
+</html>
