@@ -13,6 +13,7 @@ FileListTransformApp.controller('FileListCtrl', function ($scope) {
 	// if this is the first time we've run this
 	if ($scope.main.prependaction == false){
 	
+		/*
 		console.log("First Time");
 		console.log("Prepend: " + $scope.main.prependaction);
 		console.log("Append: " + $scope.main.appendaction);
@@ -22,6 +23,7 @@ FileListTransformApp.controller('FileListCtrl', function ($scope) {
 			console.log(value);
 		
 		});
+		*/
 		
 		// split content in text box by line
 		var initialArray = $scope.main.contents.split("\n");
@@ -63,9 +65,11 @@ FileListTransformApp.controller('FileListCtrl', function ($scope) {
 	}else{
 	
 		// we roll it back
+		/*
 		console.log("Rollback");
 		console.log("Prepend: " + $scope.main.prependaction);
 		console.log("Append: " + $scope.main.appendaction);
+		*/
 				
 		// split content in text box by line
 		var rollbackArray = $scope.main.rollback.split("\n");
